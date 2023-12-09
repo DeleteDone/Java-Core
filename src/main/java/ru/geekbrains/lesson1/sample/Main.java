@@ -1,4 +1,5 @@
-package ru.geekbrains.lesson1.sample;
+package ru.geekbrains.lesson1.sample; 
+// * @author Oksana Askerova
 
 import ru.geekbrains.lesson1.regular.Decorator;
 import ru.geekbrains.lesson1.regular.OtherClass;
