@@ -1,4 +1,5 @@
 package ru.geekbrains.lesson2;
+// * @author Oksana Askerova
 
 import java.util.Random;
 import java.util.Scanner;
