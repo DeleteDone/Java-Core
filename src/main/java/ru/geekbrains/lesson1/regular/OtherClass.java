@@ -1,4 +1,5 @@
 package ru.geekbrains.lesson1.regular;
+//  * @author Oksana Askerova
 
 public class OtherClass {
     /**
