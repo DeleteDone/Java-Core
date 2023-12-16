@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Сourse: java core for android
+ * Сourse: java core 
 
  * @Author Student Oksana Askerova
 
