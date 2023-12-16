@@ -1,5 +1,12 @@
 package ru.geekbrains.lesson4;
 
+/**
+ * Сourse: java core for android
+
+ * @Author Student Oksana Askerova
+
+ */
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
