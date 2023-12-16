@@ -1,3 +1,5 @@
+package ru.geekbrains.lesson4;
+
 class Account
 {
     private string clientLastName;
