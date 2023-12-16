@@ -1,5 +1,12 @@
 package ru.geekbrains.lesson3;
 
+/**
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
+ */
+
 abstract class Worker {
     protected String name;
 
