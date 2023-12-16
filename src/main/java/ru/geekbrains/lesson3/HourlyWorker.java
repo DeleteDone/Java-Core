@@ -1,5 +1,12 @@
 package ru.geekbrains.lesson3;
 
+/**
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
+ */
+
 /** Класс работника с почасовой оплатой труда
  *
   */
