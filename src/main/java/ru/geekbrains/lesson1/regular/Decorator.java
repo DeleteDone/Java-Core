@@ -1,9 +1,12 @@
 package ru.geekbrains.lesson1.regular;
 
 /**
- * Декоратор для декорации
-  * @author Oksana Askerova
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
  */
+
 public class Decorator {
     public static String decorate (int a) {
         /**
