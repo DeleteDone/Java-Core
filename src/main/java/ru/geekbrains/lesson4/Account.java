@@ -1,5 +1,16 @@
 package ru.geekbrains.lesson4;
 
+/**
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 class Account
 {
     private string clientLastName;
