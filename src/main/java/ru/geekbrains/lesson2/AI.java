@@ -8,7 +8,6 @@ import java.util.Scanner;
 
  * @Author Student Oksana Askerova
 
-* 3.**** Доработать искусственный интеллект, чтобы он мог блокировать ходы игрока.
 
  */
 public class AI {
