@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Сourse: java core for android
 
- * @Author Student Sana Askerova
+ * @Author Student Oksana Askerova
 
 * 3.**** Доработать искусственный интеллект, чтобы он мог блокировать ходы игрока.
 
