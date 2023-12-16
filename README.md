@@ -79,55 +79,24 @@ CMD java -classpath ./out ru.geekbrains.lesson1.sample.Main
   # Урок 4. Обработка исключений
 
 [link for directory](src/main/java/ru/geekbrains/lesson4/)
-- Напишите метод, на вход которого подаётся двумерный строковый массив размером 4х4. При
-подаче массива другого размера необходимо бросить исключение MyArraySizeException.
-- Далее метод должен пройтись по всем элементам массива, преобразовать в int и
-просуммировать. Если в каком-то элементе массива преобразование не удалось (например, в
-ячейке лежит символ или текст вместо числа), должно быть брошено исключение
-MyArrayDataException с детализацией, в какой именно ячейке лежат неверные данные.
-- В методе main() вызвать полученный метод, обработать возможные исключения
-MyArraySizeException и MyArrayDataException и вывести результат расчета.
+1. Создать программу управления банковским счетом (Account).
 
-```java
-class MyArraySizeException extends Exception {
-}
+Программа должна позволять пользователю вводить начальный баланс счета, сумму депозита и сумму снятия средств. При этом она должна обрабатывать следующие исключительные ситуации:
 
-class MyArrayDataException extends Exception {
-    private int row;
-    private int column;
+Попытка создать счет с отрицательным начальным балансом должна вызывать исключение IllegalArgumentException с соответствующим сообщением.
+Попытка внести депозит с отрицательной суммой должна вызывать исключение IllegalArgumentException с соответствующим сообщением.
+Попытка снять средства, сумма которых превышает текущий баланс, должна вызывать исключение InsufficientFundsException с сообщением о недостаточных средствах и текущим балансом.
 
-    public MyArrayDataException(int row, int column) {
-        this.row = row;
-        this.column = column;
-    }
+Продемонстрируйте работу вашего приложения:
+Программа должна обрабатывать все исключения с помощью конструкции try-catch, выводя соответствующие сообщения об ошибках.
 
-    public int getRow() {
-        return row;
-    }
+2*.
+Создать несколько типов счетов, унаследованных от Account, например: CreditAcciunt, DebitAccount.
+Создать класс (Transaction), позволяющий проводить транзакции между счетами (переводить сумму с одного счета на другой)
 
-    public int getColumn() {
-        return column;
-    }
-}
-```
+Класс Transaction должен возбуждать исключение в случае неудачной попытки перевести деньги с одного счета на другой.
 
-```java
-public static int processArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
-    if (array.length != 4 || array[0].length != 4) {
-        throw new MyArraySizeException();
-    }
+Продемонстрируйте работу вашего приложения:
+Программа должна обрабатывать все исключения с помощью конструкции try-catch, выводя соответствующие сообщения об ошибках.
 
-    int sum = 0;
-    for (int i = 0; i < array.length; i++) {
-        for (int j = 0; j < array[i].length; j++) {
-            try {
-                sum += Integer.parseInt(array[i][j]);
-            } catch (NumberFormatException e) {
-                throw new MyArrayDataException(i, j);
-            }
-        }
-    }
-
-    return sum;
-}
-```
+*Достаточно выпонить только первую задачу, вторая задача является дополнительной.
