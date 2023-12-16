@@ -1,7 +1,7 @@
 package ru.geekbrains.lesson4;
 
 /**
- * Сourse: java core for android
+ * Сourse: java core 
 
  * @Author Student Oksana Askerova
 
