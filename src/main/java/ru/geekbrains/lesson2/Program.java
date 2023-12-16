@@ -1,6 +1,10 @@
 package ru.geekbrains.lesson2;
-// * @author Oksana Askerova
+/**
+ * Сourse: java core for android
 
+ * @Author Student Oksana Askerova
+
+ */
 import java.util.Random;
 import java.util.Scanner;
 
