@@ -1,5 +1,12 @@
 package ru.geekbrains.lesson3;
 
+/**
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
+ */
+
 public class Main {
     public static void main(String[] args) {
         Worker[] workers = new Worker[4];
