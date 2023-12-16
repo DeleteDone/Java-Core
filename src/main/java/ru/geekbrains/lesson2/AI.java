@@ -15,7 +15,7 @@ public class AI {
     private static final char DOT_HUMAN = 'X';                      // символ хода человека
     private static final char DOT_AI = 'O';                         // символ хода машины
     private static final char DOT_EMPTY = '.';                      // обозначение пустой ячейки
-    private static final Scanner SCANNER = new Scanner(System.in);  // я так понял константой мы фиксируем тип, так как
+    private static final Scanner SCANNER = new Scanner(System.in);  // я так поняла константой мы фиксируем тип, так как
     private static final Random RANDOM = new Random();              // ссылочный тип не может зафиксировать значение.
     private static int fieldSizeX = 5;                                  // размер поля по оси X (горизонталь)
     private static int fieldSizeY = 5;                                  // размер поля по оси Y (Вертикаль)
