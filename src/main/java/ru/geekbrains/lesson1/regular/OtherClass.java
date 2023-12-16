@@ -1,5 +1,11 @@
 package ru.geekbrains.lesson1.regular;
-//  * @author Oksana Askerova
+
+/**
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
+ */
 
 public class OtherClass {
     /**
