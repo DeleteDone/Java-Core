@@ -66,7 +66,8 @@ public class Account implements Comparable<Account> {
         }
     }
 
-
+    {
+        {
     public synchronized long deposit(long amount) throws AccountIsBlockedException, AccountBalanceChangeException {
         checkIsBlocked();
 
