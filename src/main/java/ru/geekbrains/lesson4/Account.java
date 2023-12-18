@@ -321,6 +321,52 @@ class Account
 
 }//Конец класса
 
+/*class CreditAccount(Account) {
+		    
+ def __init__(self, account_number, balance, credit_limit){
+ super().__init__(account_number, balance)
+ self.credit_limit = credit_limit}
+ def withdraw(self, amount){
+ if self.balance + self.credit_limit < amount:
+ raise ValueError("Insufficient funds and credit limit ex
+ self.balance -= amount}
+class DebitAccount(Account)}
+ pass
+	}
+}
+
+
+class Transaction{
+ @staticmethod
+ def transfer(sender, receiver, amount):
+try {
+ sender.withdraw(amount)
+ receiver.deposit(amount)
+ print("Transaction successful.")
+	print("Transaction failed:", str(e))
+}
+
+try {
+ //Создаем два счета
+ account1 = DebitAccount("1111", 1000)
+ account2 = CreditAccount("2222", 500, 1000)
+	
+ //Выводим текущие балансы
+ print("Account 1 balance:", account1.balance)
+ print("Account 2 balance:", account2.balance)
+ 
+	//Проводим транзакцию со снятием средств со счета 1 и зачисление
+ Transaction.transfer(account1, account2, 500)
+ 
+	//Повторно выводим текущие балансы
+ print("Account 1 balance:", account1.balance)
+ print("Account 2 balance:", account2.balance)
+ 
+	//Пытаемся провести транзакцию с суммой, превышающей доступную сумму со счёта 1 и зачисление на счёт 2
+ Transaction.transfer(account1, account2, 1500)
+  except Exception as e:
+ print("An error occurred:", str(e))
+*/
 
 class BankAccountMainClass
 {
