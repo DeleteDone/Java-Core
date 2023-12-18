@@ -1,5 +1,15 @@
 package model;
 
+/**
+ * Сourse: java core 
+
+ * @Author Student Oksana Askerova
+
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import Exceptions.AccountBalanceChangeException;
 import Exceptions.AccountIsBlockedException;
 
@@ -38,13 +48,30 @@ public class Account implements Comparable<Account> {
     public void setBlocked(boolean blocked) {
         isBlocked = blocked;
     }
+    
+    @Override
+    public String toString() {
+        return "BankCard{" +
+                "ownerName='" + ownerName + '\'' +
+                ", currency=" + currency +
+                ", date='" + date + '\'' +
+                ", cardNumber=" + cardNumber +
+                ", balance=" + balance +
+                '}';
+    }
+ 
+    public class MinusCardNumberException extends Exception {
+        public MinusCardNumberException(long cardNumber) {
+            super("Номер счёта не может быть отрицательным "" + cardNumber + """);
+        }
+    }
 
 
     public synchronized long deposit(long amount) throws AccountIsBlockedException, AccountBalanceChangeException {
         checkIsBlocked();
 
         if (amount <= 0)
-            throw new AccountBalanceChangeException("Negative or Zero deposit isn't allowed.");
+            throw new AccountBalanceChangeException("Отрицательный или нулевой депозит не допускается.");
         return balance += amount;
     }
 
@@ -52,12 +79,12 @@ public class Account implements Comparable<Account> {
         checkIsBlocked();
 
         if (amount <= 0)
-            throw new AccountBalanceChangeException("Negative or Zero withdrawal isn't allowed.");
+            throw new AccountBalanceChangeException("Отрицательный или нулевой вывод средств не допускается.");
 
         long afterWithdrawalBalance = balance - amount;
 
         if (afterWithdrawalBalance < BALANCE_LIMIT)
-            throw new AccountBalanceChangeException("Account " + number + " went out of funds!");
+            throw new AccountBalanceChangeException("Account " + number + " закончились средства!");
 
         balance = afterWithdrawalBalance;
 
@@ -66,7 +93,7 @@ public class Account implements Comparable<Account> {
 
     private void checkIsBlocked() throws AccountIsBlockedException {
         if (isBlocked())
-            throw new AccountIsBlockedException("Account " + number + " is blocked!");
+            throw new AccountIsBlockedException("Account " + number + " заблокирован!");
     }
 
     @Override
@@ -84,3 +111,5 @@ public class Account implements Comparable<Account> {
                 '}';
     }
 }
+        
+
